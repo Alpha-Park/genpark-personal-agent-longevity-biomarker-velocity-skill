@@ -1,0 +1,38 @@
+{
+  "name": "genpark-personal-agent-longevity-biomarker-velocity-skill",
+  "version": "1.0.0",
+  "description": "Calculates Levine PhenoAge biological age, aging acceleration velocity, and clinical intervention priorities from standard blood biomarkers.",
+  "tools": [
+    {
+      "name": "calculate_phenotypic_age",
+      "description": "Calculates biological PhenoAge and aging velocity from 9 standard blood panel biomarkers.",
+      "parameters": {
+        "chronological_age": "float",
+        "albumin_g_dl": "float (optional, default 4.5)",
+        "creatininine_mg_dl": "float (optional, default 0.9)",
+        "glucose_mg_dl": "float (optional, default 88.0)",
+        "crp_mg_l": "float (optional, default 0.8)",
+        "lymphocyte_pct": "float (optional, default 33.0)",
+        "mcv_fl": "float (optional, default 89.0)",
+        "rdw_pct": "float (optional, default 12.5)",
+        "alk_phos_u_l": "float (optional, default 72.0)",
+        "wbc_1000_ul": "float (optional, default 6.0)"
+      }
+    },
+    {
+      "name": "prioritize_biomarker_interventions",
+      "description": "Ranks biomarker outlier interventions based on biological impact and longevity priority.",
+      "parameters": {
+        "albumin_g_dl": "float (optional)",
+        "creatinine_mg_dl": "float (optional)",
+        "glucose_mg_dl": "float (optional)",
+        "crp_mg_l": "float (optional)",
+        "lymphocyte_pct": "float (optional)",
+        "mcv_fl": "float (optional)",
+        "rdw_pct": "float (optional)",
+        "alk_phos_u_l": "float (optional)",
+        "wbc_1000_ul": "float (optional)"
+      }
+    }
+  ]
+}
